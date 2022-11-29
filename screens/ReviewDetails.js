@@ -1,11 +1,14 @@
-import { StyleSheet, View, Text } from "react-native";
+import { View, Text, Button } from "react-native";
 import { globalStyles } from "../styles/global";
 
-export const ReviewDetails = () => {
+export const ReviewDetails = ({ route }) => {
+    const { title, rating, body } = route.params;
 
     return (
         <View style={globalStyles.container}>
-            <Text>ReviewDetails Screen</Text>
+            <Text>{title}</Text>
+            <Text>{body}</Text>
+            <Text>{rating}</Text>
         </View>
     )
 };
