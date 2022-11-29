@@ -1,13 +1,13 @@
 import { StyleSheet, Text, View } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 
-export const Header = ({ navigation, title, style }) => {
+export const Header = ({ navigation, title }) => {
     const openMenu = () => {
         navigation.openDrawer();
     }
 
     return (
-        <View style={style}>
+        <View style={styles.header}>
             <MaterialIcons
                 name="menu"
                 size={28}
@@ -23,11 +23,11 @@ export const Header = ({ navigation, title, style }) => {
 
 const styles = StyleSheet.create({
     header: {
-        width: "100%",
-        heigth: "100%",
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "center"
+        width: '100%',
+        height: '100%',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
 
     headerText: {
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     },
 
     icon: {
-        position: "absolute",
-        left: 16,
+        position: 'absolute',
+        left: -62,
     }
 })

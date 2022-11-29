@@ -16,7 +16,10 @@ export const RootDrawerNavigator = () => (
                 name="GameZome"
                 component={HomeStack}
             />
-            <Drawer.Screen name="About GameZone" component={AboutStack} />
+            <Drawer.Screen
+                name="About GameZone"
+                component={AboutStack}
+            />
         </Drawer.Navigator>
     </NavigationContainer>
 )

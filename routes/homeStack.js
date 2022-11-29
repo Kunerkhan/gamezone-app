@@ -10,17 +10,17 @@ export const HomeStack = () => (
     <Stack.Navigator
         screenOptions={{
             headerStyle: {
-                backgroundColor: "#eee"
+                backgroundColor: "#eee",
+                height: 100,
             },
             headerTintColor: "#444",
-            height: 60,
         }}
     >
         <Stack.Screen
             name="GameZone"
             component={Home}
             options={({ navigation }) => ({
-                headerTitle: () => <Header navigation={navigation} title="GameZone" />,
+                headerTitle: ({}) => <Header navigation={navigation} title="GameZone" />,
             })}
         />
         <Stack.Screen
