@@ -12,11 +12,11 @@ export const Home = ({ navigation }) => {
 
     return (
         <View style={globalStyles.container}>
-            <FlatList 
+            <FlatList
                 data={reviews}
                 renderItem={({ item }) => (
                     <TouchableOpacity onPress={() => navigation.navigate("Review Details", item)}>
-                        <Text style={globalStyles.titleText}>{ item.title }</Text>
+                        <Text style={globalStyles.titleText}>{item.title}</Text>
                     </TouchableOpacity>
                 )}
             />
