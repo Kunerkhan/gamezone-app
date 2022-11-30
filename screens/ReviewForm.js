@@ -36,6 +36,7 @@ export const ReviewForm = ({ addReview }) => {
                         <TextInput
                             style={globalStyles.input}
                             placeholder="Review title"
+                            placeholderTextColor="#ddd" 
                             value={props.values.title}
                             onChangeText={props.handleChange("title")}
                             onBlur={props.handleBlur("title")}
@@ -49,6 +50,7 @@ export const ReviewForm = ({ addReview }) => {
                             minHeight={60}
                             style={globalStyles.input}
                             placeholder="Review body"
+                            placeholderTextColor="#ddd"
                             value={props.values.body}
                             onChangeText={props.handleChange("body")}
                             onBlur={props.handleBlur("body")}
@@ -60,6 +62,7 @@ export const ReviewForm = ({ addReview }) => {
                         <TextInput
                             style={globalStyles.input}
                             placeholder="Rating (1-5)"
+                            placeholderTextColor="#ddd"
                             value={props.values.rating}
                             keyboardType="numeric"
                             onChangeText={props.handleChange("rating")}
