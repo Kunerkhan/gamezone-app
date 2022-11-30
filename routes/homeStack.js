@@ -1,4 +1,5 @@
 import { createStackNavigator } from "@react-navigation/stack";
+import { ImageBackground } from "react-native";
 
 import { ReviewDetails } from "../screens/ReviewDetails";
 import { Header } from "../shared/components/header";
@@ -13,14 +14,22 @@ export const HomeStack = () => (
                 backgroundColor: "#eee",
                 height: 100,
             },
-            headerTintColor: "#444",
+            headerBackground: () => (
+                <ImageBackground
+                    source={require("../assets/game_bg.png")}
+                    style={{
+                        width: "100%",
+                        height: "100%"
+                    }}
+                />
+            )
         }}
     >
         <Stack.Screen
             name="GameZone"
             component={Home}
             options={({ navigation }) => ({
-                headerTitle: ({}) => <Header navigation={navigation} title="GameZone" />,
+                headerTitle: () => <Header navigation={navigation} title="GameZone" />,
             })}
         />
         <Stack.Screen
